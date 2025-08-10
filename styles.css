@@ -100,7 +100,7 @@ header {
     transition: transform 0.3s, filter 0.3s, opacity 0.3s;
 }
 
-.principal-a::after {
+.principal-a::after, .principal-a[aria-expanded="true"]::after {
     content: '';
     position: absolute;
     bottom: 5px;
@@ -111,13 +111,26 @@ header {
     transition: width 0.3s ease-in-out;
 }
 
-.principal-a:hover {
+.principal-a:hover, .principal-a[aria-expanded="true"]{
+    opacity: 1 !important;
     transform: translateY(-2px);
     color: var(--accent-color);
 }
 
-.principal-a:hover::after {
+.principal-a:hover::after, .principal-a[aria-expanded="true"]::after {
     width: calc(100% - 20px);
+}
+
+.dropdown-icon {
+    padding: 0;
+    margin-top: 5px;
+    margin-left: 8px;
+    font-size: 14px;
+    transition: transform 0.6s;
+}
+
+.principal-a[aria-expanded="true"] .dropdown-icon {
+    transform: rotate(180deg);
 }
 
 main {
@@ -220,14 +233,14 @@ dialog h2,
     opacity: 0;
     visibility: hidden;
     transform: translateY(-10px);
-    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s 0.3s;
+    transition: opacity 0.5s ease, transform 0.5s ease, visibility 0s 0.5s;
 }
 
 #settings-dialog.open {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
-    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s 0s;
+    transition: opacity 0.5s ease, transform 0.5s ease, visibility 0s 0s;
 }
 
 #settings-dialog form {
@@ -291,12 +304,4 @@ dialog form .save-button:hover {
 }
 
 
-.dropdown-icon {
-    margin-right: 8px;
-    font-size: 14px;
-    transition: transform 0.3s;
-}
 
-a[aria-expanded="true"] .dropdown-icon {
-    transform: rotate(-90deg);
-}

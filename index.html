@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> <!-- Icones customizados! acessar https://fontawesome.com/icons/ pra ver a library dos cara -->
     <script src="scripts/script.js" defer></script>
     <script src="scripts/roll.js" defer></script>
     <title>Ecommerce</title>
@@ -25,12 +26,14 @@
     <header>
         <nav id="principal-nav">
             <ul>
-                <li><a class="principal-a" href="#">Home</a></li>
-                <li id="about-a"><a class="principal-a" href="#">About</a></li>
-                <li><a class="principal-a" href="#">Data</a></li>
+                <li><a class="principal-a" href="#"><i class="fa-solid fa-house"></i>&nbsp; Home</a></li>
+                <li id="about-a"><a class="principal-a" href="#"><i class="fa-solid fa-code"></i>&ensp;About</i></a></li>
+                <li><a class="principal-a" href="#">Data&ensp;<i class="fa-solid fa-user"></i></a></li>
                 <li id="settings-li">
-                    <a id="settings-a" class="principal-a" href="#" aria-haspopup="true"
-                        aria-expanded="false"><span class="dropdown-icon">◀</span>Settings</a>
+                    <a id="settings-a" class="principal-a" href="#" aria-expanded="false">
+                        Settings
+                        <i class="dropdown-icon fa-solid fa-gear"></i>
+                    </a>
                     <div id="settings-dialog" role="dialog">
                         <button class="close-button" type="button">×</button>
                         <h2>Settings</h2>
