@@ -1,11 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
+
     const aboutButton = document.querySelector('#about-a a');
     const aboutDialog = document.querySelector('dialog.about');
     const settingsButton = document.getElementById('settings-a');
     const settingsDialog = document.getElementById('settings-dialog');
     const settingsForm = document.getElementById('settings-form');
     const closeButton = document.querySelector('#settings-dialog .close-button');
-    const themeSelect = document.getElementById('theme');
+    const themeSelect = document.getElementById('toggle');
 
     function applyTheme(theme) {
         document.body.setAttribute('data-theme', theme);
@@ -32,11 +33,17 @@ document.addEventListener('DOMContentLoaded', function () {
         settingsButton.setAttribute('aria-expanded', 'false');
     });
 
-    settingsForm.addEventListener('submit', function (event) {
+    themeSelect.addEventListener('change', function (event) {
         event.preventDefault();
-        const selectedTheme = themeSelect.value;
+        const selectedTheme = themeSelect.checked ? 'dark' : 'light';
         applyTheme(selectedTheme);
         localStorage.setItem('theme', selectedTheme);
+    })
+
+    settingsForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+        // submit logic here if needed
+
         settingsDialog.classList.remove('open');
         settingsButton.setAttribute('aria-expanded', 'false');
     });

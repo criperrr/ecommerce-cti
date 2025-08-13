@@ -189,15 +189,13 @@ dialog h2,
     color: var(--text-muted);
     position: absolute;
     top: 10px;
-    right: 15px;
+    right: 10px;
     background-color: transparent;
     border: none;
-    font-size: 24px;
     font-weight: bold;
     cursor: pointer;
-    padding-left: 7px;
-    padding-right: 7px;
-    font-size: 40px;
+    padding: 2px 5px 5px 5px;
+    font-size: 30px;
     line-height: 1;
     border-radius: 20%;
     transition: all 0.3s;
@@ -210,7 +208,8 @@ dialog h2,
 
 .close-button:focus {
     outline: none;
-    box-shadow: 0 0 0 2px var(--danger-color);
+    font-size: 35px;
+    opacity: 0.2;
 }
 
 #settings-li {
@@ -303,5 +302,68 @@ dialog form .save-button:hover {
     transform: translate(-50%, -50%);
 }
 
+/* Theme switch */
 
+.switch {
+    position: relative;
+    width: 70px;
+    height: 34px;
+}
 
+.toggle {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #00ddff;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before, .slider[aria-checked="true"]::before {
+    background-color: yellow;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1001;
+    content: "";
+    top: 3px;
+    height: 27px;
+    width: 27px;
+    left: 4px;
+    transition: all 0.3s;
+}
+
+.toggle:checked+.slider {
+    background-color: #383838;
+}
+
+.toggle:checked+.slider:before {
+    transform: translateX(36px);
+    background-color: rgb(115, 115, 115);
+    box-shadow: 0px 2px 5px 0px rgba(255, 255, 255, 0.3);
+}
+
+.slider i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+#sun {
+    right: 9px;
+    color: yellow;
+}
+
+#moon {
+    left: 10px;
+    color: white;
+    opacity: 0.5;
+}

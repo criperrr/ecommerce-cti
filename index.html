@@ -20,8 +20,10 @@
             <p style="text-align: center; margin-bottom: 20px;">Perfeição a gente não entrega, mas café e esforço são
                 garantidos.</p>
             <button autofocus class="save-button" type="submit" value="About-Leave-Flag">Fechar</button>
-        </form>
+        </form> 
     </dialog>
+ 
+
 
     <header>
         <nav id="principal-nav">
@@ -39,11 +41,13 @@
                         <h2>Settings</h2>
                         <form id="settings-form">
                             <div class="settings-content">
-                                <label for="theme">Theme:</label>
-                                <select id="theme" name="theme">
-                                    <option value="light">Light</option>
-                                    <option value="dark">Dark</option>
-                                </select>
+                                <label for="switch">Theme:</label>
+                                <div class="switch">
+                                    <input type="checkbox" id="toggle" class="toggle">
+                                    <label for="toggle" class="slider">
+                                        <i id="moon" class="fa-solid fa-moon"></i>
+                                        <i id="sun" class="fa-solid fa-sun"></i>
+                                </div>
                             </div>
                             <button class="save-button" type="submit">Save</button>
                         </form>
