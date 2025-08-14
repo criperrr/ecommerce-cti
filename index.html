@@ -31,26 +31,38 @@
                 <li><a class="principal-a" href="#"><i class="fa-solid fa-house"></i>&nbsp; Home</a></li>
                 <li id="about-a"><a class="principal-a" href="#"><i class="fa-solid fa-code"></i>&ensp;About</i></a></li>
                 <li><a class="principal-a" href="#">Data&ensp;<i class="fa-solid fa-user"></i></a></li>
-                <li id="settings-li">
-                    <a id="settings-a" class="principal-a" href="#" aria-expanded="false">
-                        Settings
-                        <i class="dropdown-icon fa-solid fa-gear"></i>
+                <li id="account-li">
+                    <a id="account-a" class="principal-a" href="#" aria-expanded="false">
+                        Account&nbsp;
+                        <i class="dropdown-icon fa-solid fa-user"></i>
                     </a>
-                    <div id="settings-dialog" role="dialog">
+                    <div id="account-dialog" class="account-content" role="dialog">
                         <button class="close-button" type="button">×</button>
-                        <h2>Settings</h2>
-                        <form id="settings-form">
-                            <div class="settings-content">
-                                <label for="switch">Theme:</label>
-                                <div class="switch">
-                                    <input type="checkbox" id="toggle" class="toggle">
-                                    <label for="toggle" class="slider">
-                                        <i id="moon" class="fa-solid fa-moon"></i>
-                                        <i id="sun" class="fa-solid fa-sun"></i>
-                                </div>
-                            </div>
+                        <h2>Account</h2>
+
+                        <!-- session for login or create an account, it will change a lot when we start to use PHP. -->
+                        <!-- THIS IS ONLY A PLACEHOLDER BTW, IT WILL CHANGE -->
+
+                        <form id="account-form">
+                            <!-- LOGIN PLACEHOLDER -->
+                            <label for="email">Email:</label>
+                            <input type="text" id="email" name="email" placeholder="" required>
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password" placeholder="" required>
+
+
                             <button class="save-button" type="submit">Save</button>
                         </form>
+                        <!-- Theme stuff -->
+                         <div class="container-theme" style="">
+                            <label for="switch">Theme:</label>
+                            <div class="switch">
+                                <input type="checkbox" id="toggle" class="toggle">
+                                <label for="toggle" class="slider">
+                                    <i id="moon" class="fa-solid fa-moon"></i>
+                                    <i id="sun" class="fa-solid fa-sun"></i>
+                         </div>
+                        </div>  
                     </div>
                 </li>
             </ul>

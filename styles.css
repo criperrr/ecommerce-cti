@@ -133,7 +133,29 @@ header {
 }
 
 .principal-a[aria-expanded="true"] .dropdown-icon {
-    transform: rotate(180deg);
+    animation-name: bounceDown;
+    animation-duration: 0.8s;
+    animation-iteration-count: 1;
+    transform: translateY(4px);
+}
+
+
+@keyframes bounceDown {
+    0% {
+        transform: translateY(0);
+    }
+
+    30%, 40% {
+        transform: translateY(3px);
+    }
+
+    60% {
+        transform: translateY(2px);
+    }
+
+    100% {
+        transform: translateY(4px);
+    }
 }
 
 main {
@@ -183,7 +205,7 @@ dialog::backdrop {
 }
 
 dialog h2,
-#settings-dialog h2 {
+#account-dialog h2 {
     text-align: center;
     margin-bottom: 20px;
 }
@@ -215,11 +237,15 @@ dialog h2,
     opacity: 0.2;
 }
 
-#settings-li {
+#account-li {
     position: relative;
 }
 
-#settings-dialog {
+#account-dialog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     top: 100%;
     right: 0;
@@ -238,21 +264,21 @@ dialog h2,
     transition: opacity 0.5s ease, transform 0.5s ease, visibility 0s 0.5s;
 }
 
-#settings-dialog.open {
+#account-dialog.open {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
     transition: opacity 0.5s ease, transform 0.5s ease, visibility 0s 0s;
 }
 
-#settings-dialog form {
+#account-dialog form {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px;
 }
 
-#settings-dialog .settings-content {
+#account-dialog .account-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -260,7 +286,7 @@ dialog h2,
     gap: 10px;
 }
 
-#settings-dialog form select {
+#account-dialog form select {
     padding: 10px;
     border: 1px solid var(--border-color);
     border-radius: 5px;
@@ -271,13 +297,13 @@ dialog h2,
     transition: 0.3s;
 }
 
-#settings-dialog form select:hover,
-#settings-dialog form select:focus {
+#account-dialog form select:hover,
+#account-dialog form select:focus {
     outline: none;
     border-color: var(--accent-color);
 }
 
-#settings-dialog form button,
+#account-dialog form button,
 dialog form button {
     padding: 10px 20px;
     border: none;
@@ -288,13 +314,13 @@ dialog form button {
     transition: 0.3s;
 }
 
-#settings-dialog form .save-button,
+#account-dialog form .save-button,
 dialog form .save-button {
     background-color: var(--accent-color);
     color: #ffffff;
 }
 
-#settings-dialog form .save-button:hover,
+#account-dialog form .save-button:hover,
 dialog form .save-button:hover {
     background-color: var(--accent-hover);
 }
@@ -306,9 +332,18 @@ dialog form .save-button:hover {
 }
 
 /* Theme switch */
-
+.container-theme {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    width: 100%;
+    justify-content: center;
+    color: var(--primary-text);
+}
 .switch {
     position: relative;
+    display: inline-block;
     width: 70px;
     height: 34px;
 }
@@ -361,7 +396,7 @@ dialog form .save-button:hover {
 }
 
 #sun {
-    right: 9px;
+    right: 8px;
     color: yellow;
 }
 
