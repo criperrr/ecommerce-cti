@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="login.css">
+    <script src="scripts/login.js" defer></script>
+    <title>Ecommerce</title>
+</head>
+
+<body>
+    <main>
+        <form action="" method="post" id="form-register">
+            <fieldset>
+                <label for="name">Nome:</label>
+                <input type="text" name="name" id="name" required><br>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="nome@exemplo.com" required><br>
+                <label for="tel">Telefone:</label>
+                <input type="tel" name="tel" id="tel" placeholder="00 9 0000-0000" required><br>
+                <label for="pass">Senha:</label>
+                <input type="password" name="pass" id="pass" minlength="8" required><span> (Mínimo de 8 dígitos)</span><br>
+                <label for="verify-pass">Verificar senha:</label>
+                <input type="password" name="verify-pass" id="verify-pass" minlength="8" required><br>
+
+                <p id="error"></p>
+                <input type="submit" value="Criar Conta" id="submit">
+            </fieldset>
+        </form>
+    </main>
+</body>
