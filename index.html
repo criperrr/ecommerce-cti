@@ -45,16 +45,19 @@
 
                         <form id="account-form">
                             <!-- LOGIN PLACEHOLDER -->
-                            <label for="email">Email:</label>
-                            <input type="text" id="email" name="email" placeholder="" required>
+                            <div class="text-placeholder-div">
+                                <label class="label-placeholder" id="email-label" for="email">Email:</label>
+                                <input class="custom-input" type="text" id="email" name="email" required>
+                            </div>
                             <label for="password">Password:</label>
                             <input type="password" id="password" name="password" placeholder="" required>
+                            <span>Don't have an account yet? <a href="/pages/cadastra.html">Create one now!</a></span>
 
 
                             <button class="save-button" type="submit">Save</button>
                         </form>
                         <!-- Theme stuff -->
-                         <div class="container-theme" style="">
+                         <div class="container-theme">
                             <label for="switch">Theme:</label>
                             <div class="switch">
                                 <input type="checkbox" id="toggle" class="toggle">
@@ -70,19 +73,7 @@
     </header>
 
     <main>
-        <section class="header-carousel">
-            <div class="carousel">
-                <div id="arrowLeft"><span>&#9666;</span></div>
-                <div id='slider-container'>
-                    <div class=slider1><span>1</span></div>
-                    <div class=slider2><span>2</span></div>
-                    <div class=slider3><span>3</span></div>
-                    <div class=slider4><span>4</span></div>
-                    <div class=slider5><span>5</span></div>
-                </div>
-                <div id="arrowRight"><span>&#9656;</span></div>
-            </div>
-        </section>
+    
     </main>
 
     <footer>
