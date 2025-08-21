@@ -49,6 +49,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    height: 100vh;
     width: 100%;
     transition: background-color 0.3s, color 0.3s;
 }
@@ -436,14 +437,19 @@ dialog form .save-button:hover {
 .custom-input:focus {
     outline: none;
     border-color: var(--accent-color);
-    font-size: 16px;
 }
 .custom-input::placeholder {
     color: var(--text-muted);
 }
 
-
-
+.label-placeholder.filled, .text-placeholder-div:focus-within .label-placeholder {
+    transform: translateY(-15px) translateX(-10px);
+    font-size: 12px;
+    background-color: var(--primary-bg);
+    padding: 2px;
+    border-radius: 7px;
+    color: var(--accent-color);
+}
 
 input[type="text"], input[type="email"], input[type="password"] {
     background-color: var(--primary-bg);
@@ -458,7 +464,11 @@ input[type="text"], input[type="email"], input[type="password"] {
 input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
     outline: none;
     border-color: var(--accent-color);
-    font-size: 16px;
+    
+}
+
+input[type="text"]::placeholder, input[type="email"]::placeholder, input[type="password"]::placeholder {
+    color: var(--text-muted);
 }
 
 span {

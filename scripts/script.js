@@ -1,14 +1,31 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-    const aboutButton = document.querySelector('#about-a a');
-    const aboutDialog = document.querySelector('dialog.about');
     const accountButton = document.getElementById('account-a');
     const accountDialog = document.getElementById('account-dialog');
     const accountForm = document.getElementById('account-form');
     const closeButton = document.querySelector('#account-dialog .close-button');
     const themeSelect = document.getElementById('toggle');
+    const emailInput = document.querySelector('#email');
+    const emailLabel = document.querySelector('#email-label');
+    const passwordInput = document.querySelector('#password');
+    const passwordLabel = document.querySelector('#password-label');
     
-    
+    emailInput.addEventListener('input', () => {
+        if(emailInput.value.trim() !== '') {
+            emailLabel.classList.add('filled');
+        } else {
+            emailLabel.classList.remove('filled');
+        }
+    })
+
+    passwordInput.addEventListener('input', () => {
+        if (passwordInput.value.trim() !== '') {
+            passwordLabel.classList.add('filled');
+        } else {
+            passwordLabel.classList.remove('filled');
+        }
+    })
+
     function applyTheme(theme){
         document.body.setAttribute('data-theme', theme);
         themeSelect.value = theme;
@@ -17,10 +34,6 @@ document.addEventListener('DOMContentLoaded', function () {
     } 
     (() => applyTheme(localStorage.getItem('theme') || 'light'))();
 
-    aboutButton.addEventListener('click', function (event) {
-        event.preventDefault();
-        aboutDialog.showModal();
-    });
 
     accountButton.addEventListener('click', function (event) {
         event.preventDefault();

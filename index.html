@@ -29,7 +29,7 @@
         <nav id="principal-nav">
             <ul>
                 <li><a class="principal-a" href="#"><i class="fa-solid fa-house"></i>&nbsp; Home</a></li>
-                <li id="about-a"><a class="principal-a" href="#"><i class="fa-solid fa-code"></i>&ensp;About</i></a></li>
+                <li id="about-a"><a class="principal-a" href="about.html"><i class="fa-solid fa-code"></i>&ensp;About</i></a></li>
                 <li><a class="principal-a" href="#">Data&ensp;<i class="fa-solid fa-user"></i></a></li>
                 <li id="account-li">
                     <a id="account-a" class="principal-a" href="#" aria-expanded="false">
@@ -43,18 +43,20 @@
                         <!-- session for login or create an account, it will change a lot when we start to use PHP. -->
                         <!-- THIS IS ONLY A PLACEHOLDER BTW, IT WILL CHANGE -->
 
-                        <form id="account-form">
+                        <form id="account-form" action="back/login.php" method="post">
                             <!-- LOGIN PLACEHOLDER -->
                             <div class="text-placeholder-div">
                                 <label class="label-placeholder" id="email-label" for="email">Email:</label>
                                 <input class="custom-input" type="text" id="email" name="email" required>
                             </div>
-                            <label for="password">Password:</label>
-                            <input type="password" id="password" name="password" placeholder="" required>
-                            <span>Don't have an account yet? <a href="/pages/cadastra.html">Create one now!</a></span>
+                            <div class="text-placeholder-div">
+                                <label class="label-placeholder" for="password" id="password-label">Password:</label>
+                                <input class="custom-input"  type="password" id="password" name="password" placeholder="" required>
+                            </div>
+                            <span>Don't have an account yet? <a href="login.html">Create one now!</a></span>
 
 
-                            <button class="save-button" type="submit">Save</button>
+                            <button class="save-button" type="submit">Login</button>
                         </form>
                         <!-- Theme stuff -->
                          <div class="container-theme">

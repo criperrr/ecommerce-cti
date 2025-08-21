@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="scripts/script.js" defer></script>
+    <script src="scripts/roll.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="sliders.css">
+    <title>About Us</title>
+</head>
+
+<body>
+    <header>
+        <nav id="principal-nav">
+            <ul>
+                <li><a class="principal-a" href="index.html"><i class="fa-solid fa-house"></i>&nbsp; Home</a></li>
+                <li id="about-a"><a class="principal-a" href="about.html"><i
+                            class="fa-solid fa-code"></i>&ensp;About</i></a></li>
+                <li><a class="principal-a" href="#">Data&ensp;<i class="fa-solid fa-user"></i></a></li>
+                <li id="account-li">
+                    <a id="account-a" class="principal-a" href="#" aria-expanded="false">
+                        Account&nbsp;
+                        <i class="dropdown-icon fa-solid fa-user"></i>
+                    </a>
+                    <div id="account-dialog" class="account-content" role="dialog">
+                        <button class="close-button" type="button">×</button>
+                        <h2>Account</h2>
+
+                        <!-- session for login or create an account, it will change a lot when we start to use PHP. -->
+                        <!-- THIS IS ONLY A PLACEHOLDER BTW, IT WILL CHANGE -->
+
+                        <form id="account-form">
+                            <!-- LOGIN PLACEHOLDER -->
+                            <label for="email">Email:</label>
+                            <input type="text" id="email" name="email" placeholder="" required>
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password" placeholder="" required>
+
+
+                            <button class="save-button" type="submit">Save</button>
+                        </form>
+                        <!-- Theme stuff -->
+                        <div class="container-theme" style="">
+                            <label for="switch">Theme:</label>
+                            <div class="switch">
+                                <input type="checkbox" id="toggle" class="toggle">
+                                <label for="toggle" class="slider">
+                                    <i id="moon" class="fa-solid fa-moon"></i>
+                                    <i id="sun" class="fa-solid fa-sun"></i>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main id = "main-override">
+        <section class="header-carousel">
+                <div id="arrowLeft"><span>&#9666;</span></div>
+                <div id='slider-container'>
+                    <div id="origin-slider1" class=slider1><span class ="slider-span">Front + Back</span></div>
+                    <div id="origin-slider2" class=slider2><span class ="slider-span">Front + Back + BdDesign </span></div>
+                    <div id="origin-slider3" class=slider3><span class ="slider-span">BackEnd + BdBuild</span></div>
+                    <div id="origin-slider4" class=slider4><span class ="slider-span">Front + Back + BdDesign</span></div>
+                    <div id="origin-slider5" class=slider5><span class ="slider-span">Front</span></div>
+                </div>
+                <div id="arrowRight"><span>&#9656;</span></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; E-commerce</p>
+    </footer>
+</body>
+
+</html>
