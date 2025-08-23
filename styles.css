@@ -133,6 +133,20 @@ header {
     transition: transform 0.6s;
 }
 
+.gear-icon {
+    padding: 0;
+    margin-top: 5px;
+    margin-left: 8px;
+    font-size: 18px;
+    transition: transform 0.6s;
+}
+
+.principal-a[aria-expanded="true"] .gear-icon {
+    animation-duration: 0.4s;
+    animation-iteration-count: 1;
+    transform: rotate(180deg);
+}
+
 .principal-a[aria-expanded="true"] .dropdown-icon {
     animation-name: bounceDown;
     animation-duration: 0.8s;
@@ -206,7 +220,7 @@ dialog::backdrop {
 }
 
 dialog h2,
-#account-dialog h2 {
+#account-dialog h2, .settings-dialog h2 {
     text-align: center;
     margin-bottom: 20px;
 }
@@ -238,11 +252,11 @@ dialog h2,
     opacity: 0.2;
 }
 
-#account-li {
+#account-li, #settings-li {
     position: relative;
 }
 
-#account-dialog {
+#account-dialog, #settings-dialog {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -265,21 +279,21 @@ dialog h2,
     transition: opacity 0.5s ease, transform 0.5s ease, visibility 0s 0.5s;
 }
 
-#account-dialog.open {
+#account-dialog.open, #settings-dialog.open {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
     transition: opacity 0.5s ease, transform 0.5s ease, visibility 0s 0s;
 }
 
-#account-dialog form {
+#account-dialog form, #settings-dialog form {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px;
 }
 
-#account-dialog .account-content {
+#account-dialog .account-content, #settings-dialog .settings-content form {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -287,7 +301,7 @@ dialog h2,
     gap: 10px;
 }
 
-#account-dialog form select {
+#account-dialog form select, #settings-dialog form select {
     padding: 10px;
     border: 1px solid var(--border-color);
     border-radius: 5px;
@@ -299,13 +313,14 @@ dialog h2,
 }
 
 #account-dialog form select:hover,
-#account-dialog form select:focus {
+#account-dialog form select:focus,
+#settings-dialog form select:hover,
+#settings-dialog form select:focus {
     outline: none;
     border-color: var(--accent-color);
 }
 
-#account-dialog form button,
-dialog form button {
+form button {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -313,16 +328,11 @@ dialog form button {
     font-size: 16px;
     font-weight: bold;
     transition: 0.3s;
-}
-
-#account-dialog form .save-button,
-dialog form .save-button {
     background-color: var(--accent-color);
     color: #ffffff;
 }
 
-#account-dialog form .save-button:hover,
-dialog form .save-button:hover {
+form button:hover {
     background-color: var(--accent-hover);
 }
 

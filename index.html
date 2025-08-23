@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> <!-- Icones customizados! acessar https://fontawesome.com/icons/ pra ver a library dos cara -->
     <script src="scripts/script.js" defer></script>
+    <script src="scripts/animations/upPlaceholder.js"></script>
     <script src="scripts/roll.js" defer></script>
     <title>Ecommerce</title>
 </head>
@@ -46,11 +47,11 @@
                         <form id="account-form" action="back/login.php" method="post">
                             <!-- LOGIN PLACEHOLDER -->
                             <div class="text-placeholder-div">
-                                <label class="label-placeholder" id="email-label" for="email">Email:</label>
+                                <label class="label-placeholder" id="email-label" for="email" data-occult-text="Email">nome@exemplo.com</label>
                                 <input class="custom-input" type="text" id="email" name="email" required>
                             </div>
                             <div class="text-placeholder-div">
-                                <label class="label-placeholder" for="password" id="password-label">Password:</label>
+                                <label class="label-placeholder" for="password" id="password-label" data-occult-text="Password">Super password here</label>
                                 <input class="custom-input"  type="password" id="password" name="password" placeholder="" required>
                             </div>
                             <span>Don't have an account yet? <a href="login.html">Create one now!</a></span>
