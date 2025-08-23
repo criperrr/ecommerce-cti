@@ -314,10 +314,8 @@ dialog h2,
     transition: 0.3s;
 }
 
-#account-dialog form select:hover,
-#account-dialog form select:focus,
-#settings-dialog form select:hover,
-#settings-dialog form select:focus {
+form select:hover,
+form select:focus {
     outline: none;
     border-color: var(--accent-color);
 }
