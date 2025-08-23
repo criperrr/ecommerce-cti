@@ -413,19 +413,21 @@ dialog form .save-button:hover {
     align-items: center;
     justify-content: center;
     position: relative;
-    width: 100%;
+    width: fit-content;
     
 }
 
 .label-placeholder {
     position: absolute;
-    left: 25px;
+    left: 10px;
     color: var(--text-muted);
     transition: all 0.3s ease-in-out;
 }
 
 .custom-input {
-    
+    padding: 12px 10px;
+    min-width: 200px;
+    min-height: 40px;
     background-color: var(--primary-bg);
     color: var(--primary-text);
     border: 1px solid var(--border-color);
@@ -442,10 +444,15 @@ dialog form .save-button:hover {
     color: var(--text-muted);
 }
 
-.label-placeholder.filled, .text-placeholder-div:focus-within .label-placeholder {
-    transform: translateY(-15px) translateX(-10px);
+.label-placeholder {
+    cursor: text;
+}
+
+.label-placeholder.filled, .text-placeholder-div:focus-within .label-placeholder{
+    transform: translateY(-15px) translateX(-7px);
     font-size: 12px;
     background-color: var(--primary-bg);
+    cursor: auto;
     padding: 2px;
     border-radius: 7px;
     color: var(--accent-color);
@@ -481,4 +488,18 @@ a {
     color: var(--accent-color);
     text-decoration: none;
     transition: color 0.3s;
+}
+
+
+.form-cadastro {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-cadastro fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
