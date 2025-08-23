@@ -38,8 +38,6 @@
                             <input type="text" id="email" name="email" placeholder="" required>
                             <label for="password">Password:</label>
                             <input type="password" id="password" name="password" placeholder="" required>
-
-
                             <button class="save-button" type="submit">Save</button>
                         </form>
                         <!-- Theme stuff -->
@@ -58,14 +56,20 @@
         </nav>
     </header>
     <main id = "main-override">
+        <dialog id = "about-page-dialog" open>
+            <button id = "close-dialog-button">Fechar</button>
+            <article class = "dialog-article">
+                <p>Ola! projeto teste</p>
+            </article>
+        </dialog>
         <section class="header-carousel">
                 <div id="arrowLeft"><span>&#9666;</span></div>
                 <div id='slider-container'>
-                    <div id="origin-slider1" class=slider1><span class ="slider-span">Front + Back</span></div>
-                    <div id="origin-slider2" class=slider2><span class ="slider-span">Front + Back + BdDesign </span></div>
-                    <div id="origin-slider3" class=slider3><span class ="slider-span">BackEnd + BdBuild</span></div>
-                    <div id="origin-slider4" class=slider4><span class ="slider-span">Front + Back + BdDesign</span></div>
-                    <div id="origin-slider5" class=slider5><span class ="slider-span">Front</span></div>
+                    <div id="origin-slider1" class=slider1></div>
+                    <div id="origin-slider2" class=slider2></div>
+                    <div id="origin-slider3" class=slider3></div>
+                    <div id="origin-slider4" class=slider4></div>
+                    <div id="origin-slider5" class=slider5></div>
                 </div>
                 <div id="arrowRight"><span>&#9656;</span></div>
         </section>
