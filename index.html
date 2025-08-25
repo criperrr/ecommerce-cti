@@ -5,14 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> <!-- Icones customizados! acessar https://fontawesome.com/icons/ pra ver a library dos cara -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Icones customizados! acessar https://fontawesome.com/icons/ pra ver a library dos cara -->
     <script src="scripts/script.js" defer></script>
+    <link rel="icon" href="/media/icon/RobloxLogo.webp">
     <script src="scripts/animations/upPlaceholder.js"></script>
     <script src="scripts/roll.js" defer></script>
     <title>Ecommerce</title>
 </head>
 
 <body>
+    <!--
     <dialog class="about">
         <h2>About Us</h2>
         <form id="about-forms" method="dialog">
@@ -21,59 +24,78 @@
             <p style="text-align: center; margin-bottom: 20px;">Perfeição a gente não entrega, mas café e esforço são
                 garantidos.</p>
             <button autofocus class="save-button" type="submit" value="About-Leave-Flag">Fechar</button>
-        </form> 
+        </form>
     </dialog>
-    <header>
+    -->
+    <header class="main-header">
         <nav id="principal-nav">
-            <ul>
+
+            <a href="index.html" class="nav-logo"><img src="/media/icon/RobloxLogo.webp"
+                    height="30px"></i>&nbsp;myPussie</a>
+
+            <ul class="nav-links">
                 <li><a class="principal-a" href="#"><i class="fa-solid fa-house"></i>&nbsp; Home</a></li>
-                <li id="about-a"><a class="principal-a" href="about.html"><i class="fa-solid fa-code"></i>&ensp;About</i></a></li>
-                <li><a class="principal-a" href="#">Data&ensp;<i class="fa-solid fa-user"></i></a></li>
-                <li id="account-li">
-                    <a id="account-a" class="principal-a" href="#" aria-expanded="false">
-                        Account&nbsp;
-                        <i class="dropdown-icon fa-solid fa-user"></i>
-                    </a>
-                    <div id="account-dialog" class="account-content" role="dialog">
-                        <button class="close-button" type="button">×</button>
-                        <h2>Account</h2>
+                <li id="about-a"><a class="principal-a" href="about.html"><i
+                            class="fa-solid fa-code"></i>&nbsp;About</i></a></li>
 
-                        <!-- session for login or create an account, it will change a lot when we start to use PHP. -->
-                        <!-- THIS IS ONLY A PLACEHOLDER BTW, IT WILL CHANGE -->
-
-                        <form id="account-form" action="back/login.php" method="post">
-                            <!-- LOGIN PLACEHOLDER -->
-                            <div class="text-placeholder-div">
-                                <label class="label-placeholder" id="email-label" for="email" data-occult-text="Email">nome@exemplo.com</label>
-                                <input class="custom-input" type="text" id="email" name="email" required>
-                            </div>
-                            <div class="text-placeholder-div">
-                                <label class="label-placeholder" for="password" id="password-label" data-occult-text="Senha">Sua senha super secreta</label>
-                                <input class="custom-input"  type="password" id="password" name="password" placeholder="" required>
-                            </div>
-                            <span>Don't have an account yet? <a href="login.html">Create one now!</a></span>
-
-
-                            <button class="save-button" type="submit">Login</button>
-                        </form>
-                        <!-- Theme stuff -->
-                         <div class="container-theme">
-                            <label for="switch">Theme:</label>
-                            <div class="switch">
-                                <input type="checkbox" id="toggle" class="toggle">
-                                <label for="toggle" class="slider">
-                                    <i id="moon" class="fa-solid fa-moon"></i>
-                                    <i id="sun" class="fa-solid fa-sun"></i>
-                         </div>
-                        </div>  
-                    </div>
-                </li>
             </ul>
+
+            <div class="nav-account">
+                <a id="account-a" class="principal-a" href="#" aria-expanded="false">
+                    Account&nbsp;
+                    <i class="dropdown-icon fa-solid fa-user"></i>
+                </a>
+
+                <div id="account-dialog" class="account-content" role="dialog">
+                    <button class="close-button" type="button">x</button>
+                    <h2>Account</h2>
+
+                    <!-- session for login or create an account, it will change a lot when we start to use PHP. -->
+                    <!-- THIS IS ONLY A PLACEHOLDER BTW, IT WILL CHANGE -->
+
+                    <form id="account-form" action="back/login.php" method="post">
+                        <!-- LOGIN PLACEHOLDER -->
+                        <div class="text-placeholder-div">
+                            <label class="label-placeholder" id="email-label" for="email"
+                                data-occult-text="Email">nome@exemplo.com</label>
+                            <input class="custom-input" type="text" id="email" name="email" required>
+                        </div>
+                        <div class="text-placeholder-div">
+                            <label class="label-placeholder" for="password" id="password-label"
+                                data-occult-text="Senha">Sua senha super secreta</label>
+                            <input class="custom-input" type="password" id="password" name="password" placeholder=""
+                                required>
+                        </div>
+                        <span>Don't have an account yet? <a href="login.html">Create one now!</a></span>
+
+
+                        <button class="save-button" type="submit">Login</button>
+                    </form>
+                    <!-- Theme stuff -->
+                    <div class="container-theme">
+                        <label for="switch">Theme:</label>
+                        <div class="switch">
+                            <input type="checkbox" id="toggle" class="toggle">
+                            <label for="toggle" class="slider">
+                                <i id="moon" class="fa-solid fa-moon"></i>
+                                <i id="sun" class="fa-solid fa-sun"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </nav>
     </header>
 
-    <main>
-    
+    <main class="main-content">
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Cada dia enchendo mais o meu potinho com o plush do basil dentro...</h1>
+                <p>As pelúcias mais macias e adoráveis estão esperando por você!</p>
+                <a href="#" class="button-primary">Ver Coleção</a>
+            </div>
+        </section>
+        <hr class="section-divider">
+
     </main>
 
     <footer>

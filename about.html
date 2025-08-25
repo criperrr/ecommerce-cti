@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <script src="scripts/script.js" defer></script>
-    <script src="scripts/roll.js" defer></script>
+    <script src="scripts/roll.js" type="module" defer></script>
+    <script src="scripts/about.js" type="module" defer></script>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="sliders.css">
     <title>About Us</title>
@@ -26,22 +27,32 @@
                         <i class="dropdown-icon fa-solid fa-user"></i>
                     </a>
                     <div id="account-dialog" class="account-content" role="dialog">
-                        <button class="close-button" type="button">×</button>
+                        <button class="close-button" type="button">x</button>
                         <h2>Account</h2>
 
                         <!-- session for login or create an account, it will change a lot when we start to use PHP. -->
                         <!-- THIS IS ONLY A PLACEHOLDER BTW, IT WILL CHANGE -->
 
-                        <form id="account-form">
+                        <form id="account-form" action="back/login.php" method="post">
                             <!-- LOGIN PLACEHOLDER -->
-                            <label for="email">Email:</label>
-                            <input type="text" id="email" name="email" placeholder="" required>
-                            <label for="password">Password:</label>
-                            <input type="password" id="password" name="password" placeholder="" required>
-                            <button class="save-button" type="submit">Save</button>
+                            <div class="text-placeholder-div">
+                                <label class="label-placeholder" id="email-label" for="email"
+                                    data-occult-text="Email">nome@exemplo.com</label>
+                                <input class="custom-input" type="text" id="email" name="email" required>
+                            </div>
+                            <div class="text-placeholder-div">
+                                <label class="label-placeholder" for="password" id="password-label"
+                                    data-occult-text="Senha">Sua senha super secreta</label>
+                                <input class="custom-input" type="password" id="password" name="password" placeholder=""
+                                    required>
+                            </div>
+                            <span>Don't have an account yet? <a href="login.html">Create one now!</a></span>
+
+
+                            <button class="save-button" type="submit">Login</button>
                         </form>
                         <!-- Theme stuff -->
-                        <div class="container-theme" style="">
+                        <div class="container-theme">
                             <label for="switch">Theme:</label>
                             <div class="switch">
                                 <input type="checkbox" id="toggle" class="toggle">
@@ -55,23 +66,38 @@
             </ul>
         </nav>
     </header>
-    <main id = "main-override">
-        <dialog id = "about-page-dialog" open>
-            <button id = "close-dialog-button">Fechar</button>
-            <article class = "dialog-article">
-                <p>Ola! projeto teste</p>
-            </article>
+    <main id="main-override">
+        <dialog id="about-page-dialog">
+            <div class="dialog-container">
+                <img id="dialog-image" src="pinto" alt="">
+                <button id="close-dialog-button">x</button>
+                <article class="dialog-article">
+                    <p id="dialog-description">Ola! projeto teste</p>
+                </article>
+            </div>
         </dialog>
         <section class="header-carousel">
-                <div id="arrowLeft"><span>&#9666;</span></div>
-                <div id='slider-container'>
-                    <div id="origin-slider1" class=slider1></div>
-                    <div id="origin-slider2" class=slider2></div>
-                    <div id="origin-slider3" class=slider3></div>
-                    <div id="origin-slider4" class=slider4></div>
-                    <div id="origin-slider5" class=slider5></div>
+            <div id="arrowLeft"><span>&#9666;</span></div>
+            <div id='slider-container'>
+                <div id="origin-slider1" class="slider1"><img data-description="Outro fudido q n fez nada no site"
+                        src="/media/images/devs/Henrique.jpg" alt="Henrique dev">
                 </div>
-                <div id="arrowRight"><span>&#9656;</span></div>
+                <div id="origin-slider2" class="slider2"><img data-description="Divo bafonico que fez quase tudo"
+                        src="/media/images/devs/Heitor.jpg" alt="Heitor dev">
+                </div>
+                <div id="origin-slider3" class="slider3"><img data-description="Não fez porra nenhuma e é um merda"
+                        src="/media/images/devs/Leonardo.png" alt="Leonardo dev">
+                </div>
+                <div id="origin-slider4" class="slider4"><img data-description="Não sabe nem oq é um html"
+                        src="/media/images/devs/Giovanna.jpg" alt="Giovanna dev">
+                </div>
+                <div id="origin-slider5" class="slider5"><img
+                        data-description="Tá fazendo o RPG em php, ao inves do site" src="/media/images/devs/Arthur.jpg"
+                        alt="Arthur dev">
+                </div>
+                <div id="origin-slider6" class="slider6"></div>
+            </div>
+            <div id="arrowRight"><span>&#9656;</span></div>
         </section>
     </main>
     <footer>

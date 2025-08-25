@@ -1,6 +1,6 @@
-document.addEventListener('DOMContentLoaded', function (){   
+document.addEventListener('DOMContentLoaded', function () {
+    const textInputs = document.querySelectorAll('.custom-input');
 
-   const textInputs = document.querySelectorAll('.custom-input');
     textInputs.forEach((input) => {
         const label = input.previousElementSibling;
         const occultText = label.dataset.occultText;
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function (){
             clearIntervals(); // para todos os intervalos dentro do array
             let currentText = label.textContent;
             if (!occultText || input.value.trim() !== '') return;
-            
+
             const eraseInterval = setInterval(() => {
                 if (currentText.length > 0) {
                     console.log("oi");
@@ -46,11 +46,11 @@ document.addEventListener('DOMContentLoaded', function (){
                         } else {
                             clearInterval(typeInterval);
                         }
-                        
+
                     }, 10);  //velocidade pra escrever
                     currentIntervals.push(typeInterval); // colocar o typeinteval e o erase interval na array pra evitar q os dois rodem simultaneamente
                 }
-               
+
             }, 10); //velocidade pra apgar 
             currentIntervals.push(eraseInterval);
         };

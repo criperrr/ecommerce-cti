@@ -6,20 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="login.css">
     <script src="scripts/script.js" defer></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> <!-- Icones customizados! acessar https://fontawesome.com/icons/ pra ver a library dos cara -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Icones customizados! acessar https://fontawesome.com/icons/ pra ver a library dos cara -->
     <link rel="stylesheet" href="styles.css">
     <script src="scripts/login.js" defer></script>
     <script src="scripts/animations/upPlaceholder.js" defer> </script>
     <title>Ecommerce</title>
 
-    
+
 </head>
 
 <body>
     <header>
         <nav id="principal-nav">
             <ul>
-                <li><a class="principal-a" href="#"><i class="fa-solid fa-house"></i>&nbsp; Home</a></li>
+                <li><a class="principal-a" href="index.html"><i class="fa-solid fa-house"></i>&nbsp; Home</a></li>
                 <li id="about-a"><a class="principal-a" href="about.html"><i
                             class="fa-solid fa-code"></i>&ensp;About</i></a></li>
                 <li><a class="principal-a" href="#">Data&ensp;<i class="fa-solid fa-user"></i></a></li>
@@ -31,7 +32,7 @@
                     <div id="settings-dialog" class="settings-content" role="dialog">
                         <button class="close-button" type="button">×</button>
                         <h2>Settings</h2>
-    
+
                         <!-- Theme stuff -->
                         <div class="container-theme">
                             <label for="switch">Theme:</label>
@@ -51,13 +52,13 @@
         <form action="" class="form-cadastro" method="post" id="form-register">
             <fieldset>
                 <div class="text-placeholder-div">
-                    <label class="label-placeholder" for="name" >Nome</label>
+                    <label class="label-placeholder" for="name">Nome</label>
                     <input class="custom-input" type="text" name="name" id="name" required><br>
                 </div>
                 <div class="text-placeholder-div">
                     <label class="label-placeholder" for="email" data-occult-text="Email">nome@exemplo.com</label>
-                    <input class="custom-input" type="email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-                        required>
+                    <input class="custom-input" type="email" name="email" id="email"
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
                 </div>
                 <div class="text-placeholder-div">
                     <label class="label-placeholder" data-occult-text="Telefone" for="tel">+xx (xx) xxxx-xxxx</label>
@@ -68,8 +69,10 @@
                     <input class="custom-input" type="password" name="pass" id="pass" minlength="8" required>
                 </div>
                 <div class="text-placeholder-div">
-                    <label class="label-placeholder" for="verify-pass" data-occult-text="Verificação">Confirme sua senha</label>
-                    <input class="custom-input" type="password" name="verify-pass" id="verify-pass" minlength="8" required><br>
+                    <label class="label-placeholder" for="verify-pass" data-occult-text="Verificação">Confirme sua
+                        senha</label>
+                    <input class="custom-input" type="password" name="verify-pass" id="verify-pass" minlength="8"
+                        required><br>
                 </div>
                 <p id="error"></p>
                 <button class="save-button" type="submit">Cadastrar</button>
